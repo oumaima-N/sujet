@@ -1,15 +1,15 @@
 const mongoose = require('mongoose')
 
 const offreStageSchema = mongoose.Schema({
-    titre:{
+    title:{
         type : String,
         require: true,
     },
-    Description:{
+    description:{
         type : String,
         require: true,
     },
-    durée:{
+    duration:{
         type : String,
         require: true,
     },
@@ -17,7 +17,7 @@ const offreStageSchema = mongoose.Schema({
         type : Date,
         require: true,
     },
-    niveauEtude:{
+    profession:{
         type : String,
         require: true,
     },
