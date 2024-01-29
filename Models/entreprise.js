@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const entrepriseSchema = mongoose.Schema({
-    nom:{
+    name:{
         type : String,
         require: true,
     },
@@ -9,19 +9,19 @@ const entrepriseSchema = mongoose.Schema({
         type : String,
         require: true,
     },
-    email:{
+    mail:{
         type : String,
         require: true,
     },
-    telephone:{
+    phone:{
         type : Number,
         require: true,
     },
-    urlSiteWeb:{
+    urlWebSite:{
         type : String,
         require: true,
     },
-    secteurActivité:{
+    Sectoractivity:{
         type : String,
         require: true,
     },
