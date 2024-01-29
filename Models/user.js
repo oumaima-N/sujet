@@ -1,27 +1,23 @@
 const mongoose = require('mongoose')
 
 const etudiantSchema = mongoose.Schema({
-    nom:{
+    name:{
         type : String,
         require: true,
     },
-    prenom:{
+    lastname:{
         type : String,
         require: true,
     },
-    email:{
+    mail:{
         type : String,
         require: true,
     },
-    telephone:{
+    phone:{
         type : Number,
         require: true,
     },
-    universite:{
-        type : String,
-        require: true,
-    },
-    domaineEtude:{
+    professionalDomain:{
         type : String,
         require: true,
     },
