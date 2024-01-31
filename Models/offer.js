@@ -1,4 +1,6 @@
-import { Schema, model } from 'mongoose';
+const mongoose = require('mongoose')
+
+const Schema = mongoose.Schema;
 
 const offerSchema = Schema({
     title:{
@@ -40,4 +42,4 @@ const offerSchema = Schema({
 });
 
 
-export default Offre = model('offre',offerSchema);
+module.exports = Offer = mongoose.model('offer',offerSchema)
