@@ -1,3 +1,4 @@
+ // import la bibliotheque Mongoose(facilite l'interaction avec mongodb en fournissant une couche d'abstraction)
 const mongoose = require('mongoose')
 
 const etudiantSchema = mongoose.Schema({
