@@ -1,7 +1,8 @@
  // import la bibliotheque Mongoose(facilite l'interaction avec mongodb en fournissant une couche d'abstraction)
-const mongoose = require('mongoose')
+import { Schema, model } from 'mongoose';
 
-const etudiantSchema = mongoose.Schema({
+//const mongoose = require('mongoose') (on le remplace avec [import { Schema, model } from 'mongoose';])
+const userSchema = Schema({
     name:{
         type : String,
         require: true,
@@ -22,11 +23,22 @@ const etudiantSchema = mongoose.Schema({
         type : String,
         require: true,
     },
+    type: { 
+        type: String, 
+        enum: ['etudiant', 'employee']
+    },
     urlCv:{
         type : String,
         require: true,
-    }
+    },
+    offers: [
+    {
+         type: Schema.Types.ObjectId,
+          ref: 'offer' ,
+    },],
+
 });
 
 
-module.exports = Etudiant = mongoose.model('etudiant',etudiantSchema)
+export default User = model('User',userSchema);
+//module.exports = User = mongoose.model('user',userSchema)

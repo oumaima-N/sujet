@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+import { Schema, model } from 'mongoose';
 
-const offreStageSchema = mongoose.Schema({
+const offerSchema = Schema({
     title:{
         type : String,
         require: true,
@@ -8,6 +8,10 @@ const offreStageSchema = mongoose.Schema({
     description:{
         type : String,
         require: true,
+    },
+    type: { 
+        type: String, 
+        enum: ['Stage', 'Emploi']
     },
     duration:{
         type : String,
@@ -20,13 +24,20 @@ const offreStageSchema = mongoose.Schema({
     profession:{
         type : String,
         require: true,
+        
     },
     
     demande:{
         type : String,
         require: true,
-    }
+    },
+    Users: [
+    { type: Schema.Types.ObjectId, 
+        ref: 'User',
+    },
+    ],
+
 });
 
 
-module.exports = Offrestage = mongoose.model('offreStage',Offrestage)
+export default Offre = model('offre',offerSchema);
