@@ -18,9 +18,22 @@ mongoose.connect("mongodb://127.0.0.1:27017")
 //         console.log(err)
 //     })
 // })
-app.get('/bonjour',(req,res)=> {
-    res.send('oumayma')
-})
+app.get('/user',(req,res) => {
+    const User =new user({
+       name: 'ahmed',
+       lastName: 'sadda'
+
+    });
+    User.save()
+        .then((result) =>{
+            res.send(result)
+        })
+        .catch((err) =>{
+            console.log(err);
+        });
+   
+});
+
 
 app.listen(3002, ()=>{
     console.log("Server is Running")
