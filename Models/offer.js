@@ -28,11 +28,6 @@ const offerSchema = Schema({
         require: true,
         
     },
-    
-    demande:{
-        type : String,
-        require: true,
-    },
     Users: [
     { type: Schema.Types.ObjectId, 
         ref: 'User',

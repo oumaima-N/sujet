@@ -36,11 +36,7 @@ const userSchema =  new mongoose.Schema({
         type : String,
         require: true,
     },
-    offers: [
-    {
-         type: Schema.Types.ObjectId,
-          ref: 'offer' ,
-    },],
+    
 
 });
 
