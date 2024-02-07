@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose =require('mongoose')
+
 const user = require('./Models/user');
 
 const app = express()

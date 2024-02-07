@@ -32,7 +32,12 @@ const entrepriseSchema = mongoose.Schema({
              type: Schema.Types.ObjectId,
               ref: 'offer' ,
         },],
-    
+    login: [
+    {
+         type: mongoose.Schema.Types.ObjectId,
+            ref: 'Login'
+        }    
+    ]
 });
 
 

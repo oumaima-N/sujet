@@ -1,5 +1,6 @@
 const mongoose = require(mongoose);
-const User = require('./user');
+const entreprise = require('./Company');
+const campany = require('./Company');
 const Offer = require('./offer');
 
 mongoose.connect('mongodb://127.0.0.1:27017');
@@ -11,18 +12,18 @@ mongoose.connect('mongodb://127.0.0.1:27017');
 //const Offer= new Offer({});
 
 // Ajouter les références dans les tableaux correspondants
-User.offers.push(Offer._id);
-Offer.users.push(User._id);
+campany.offers.push(Offer._id);
+Offer.campany.push(entreprise._id);
 
-// save user in BD
+// save entreprise in BD
 User.save((err) => {
     if (err) throw err;
 
     // save offer in BD
-    offreStage.save((err) => {
+    offre.save((err) => {
         if (err) throw err;
 
-        console.log('offer et user créés avec la relation.');
+        console.log('offer et campany créés avec la relation.');
         mongoose.connection.close();
     });
 });

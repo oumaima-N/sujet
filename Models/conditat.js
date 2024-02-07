@@ -36,6 +36,10 @@ const userSchema =  new mongoose.Schema({
         type : String,
         require: true,
     },
+    login: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Login'
+    }
     
 
 });

@@ -1,4 +1,4 @@
-// lorsque user faire une demande
+// lorsque conditat faire une demande de stage ou d'emploi
 const mongoose = require('mongoose');
 
 const demandeSchema = new mongoose.Schema({
@@ -23,6 +23,17 @@ const demandeSchema = new mongoose.Schema({
         type: Date, 
         default: Date.now 
     },
+    offers: [
+        {
+             type: Schema.Types.ObjectId,
+              ref: 'offer' ,
+        },],
+    offers: [
+            {
+                 type: Schema.Types.ObjectId,
+                  ref: 'offer' ,
+            },],    
+
     
 });
 
