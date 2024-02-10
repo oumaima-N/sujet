@@ -1,9 +1,8 @@
 import './App.css';
-import { Navbar, Container, Button, Table, Modal, Form } from "react-bootstrap";
 import { useState } from 'react';
 
 function LoginForm() {
-    const [mail, setEmail] = useState('');
+    const [mail, setMail] = useState('');
     const [password, setPassword] = useState('');
   
     const handleSubmit = (e) => {
@@ -16,7 +15,7 @@ function LoginForm() {
       
   
       <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" value={mail} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="email" placeholder="Email" value={mail} onChange={(e) => setMail(e.target.value)} required />
         <input type="password" placeholder="Mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button type="submit">Se connecter</button>
       </form>
