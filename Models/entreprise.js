@@ -6,16 +6,22 @@ const entrepriseSchema = mongoose.Schema({
         type : String,
         require: true,
     },
-    adress:{
-        type : String,
-        require: true,
-    },
     mail:{
         type : String,
         require: true,
     },
+    
+    
+    pdw:{
+        type: String,
+        require :true,
+    },
     phone:{
         type : Number,
+        require: true,
+    },
+    adress:{
+        type : String,
         require: true,
     },
     urlWebSite:{

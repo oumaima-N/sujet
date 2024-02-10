@@ -28,10 +28,10 @@ const demandeSchema = new mongoose.Schema({
              type: Schema.Types.ObjectId,
               ref: 'offer' ,
         },],
-    offers: [
+    conditat: [
             {
                  type: Schema.Types.ObjectId,
-                  ref: 'offer' ,
+                  ref: 'conditat' ,
             },],    
 
     

@@ -46,4 +46,4 @@ const userSchema =  new mongoose.Schema({
 
 
 //export default User = model('User',userSchema);
-module.exports = User = mongoose.model('user',userSchema)
+module.exports = User = mongoose.model('conditat',userSchema)
