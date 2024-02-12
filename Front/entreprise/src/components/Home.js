@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import axios from "axios";
-import {useNavigate , link} from "react-router-dom";
+import React from 'react';
+import '../App.css'
+import {useLocation} from "react-router-dom";
 
 function Home(){
 
@@ -9,7 +9,7 @@ function Home(){
 
    return (
        <div className="homepage">
-             // afficher le nom de utilisateur
+             {/* // afficher le nom de utilisateur */}
             <h1>Hello {location.state.id} and welcome to the home</h1>
 
        </div>
@@ -17,3 +17,4 @@ function Home(){
 
 
 }
+export default Home;

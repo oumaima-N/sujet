@@ -25,12 +25,12 @@ const demandeSchema = new mongoose.Schema({
     },
     offers: [
         {
-             type: Schema.Types.ObjectId,
+             type: mongoose.Schema.Types.ObjectId,
               ref: 'offer' ,
         },],
     conditat: [
             {
-                 type: Schema.Types.ObjectId,
+                 type: mongoose.Schema.Types.ObjectId,
                   ref: 'conditat' ,
             },],    
 
