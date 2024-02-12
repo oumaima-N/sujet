@@ -9,7 +9,7 @@ function Login() {
     const [password, setPassword] = useState('');
   
     async function submit(e) {
-        e.preventDefault();
+
         try {
             const res = await axios.post("http://127.0.0.1:3000/", { mail, password });
 
@@ -30,13 +30,13 @@ function Login() {
             <form>
                 <input type="email" placeholder="Email" value={mail} onChange={(e) => setMail(e.target.value)} required />
                 <input type="password" placeholder="Mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                <input type="submit" onClick={submit} />
-            </form>
+                <button type="submit">Login</button>   
+             </form>
 
             <br />
             <p>OR</p>
             <br />
-            <Link to="/signup">Signup Page</Link>
+            <p>Vous n'avez pas de compte ? <Link to="/signup">Inscrivez-vous ici</Link></p>
         </div>
     );
 }

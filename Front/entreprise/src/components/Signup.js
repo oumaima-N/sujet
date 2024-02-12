@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function Signup(e) {
-  
+function Signup() {
   const navigate = useNavigate();
   const handleGoBack = () => {
     navigate(-1);
@@ -15,8 +14,8 @@ function Signup(e) {
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
 
-  async function submit() {
-   
+  async function submit(e) {
+    e.preventDefault();
     try {
       const res = await axios.post("http://127.0.0.1:3000/signup", {
         mail,
@@ -38,7 +37,7 @@ function Signup(e) {
   };
 
   return (
-    <div className="signup">
+    <div className="login">
       <h1>Page d'inscription pour les entreprises</h1>
       <form onSubmit={submit}>
         <input type="email" placeholder="Email" value={mail} onChange={(e) => setMail(e.target.value)} required />

@@ -2,22 +2,22 @@
 
 const entreprise = require("../Models/entreprise");
 
-exports.Login = async (req, res) => {
-  const { mail, password } = req.body;
-  try {
-    const check = await entreprise.findOne({ mail, password });
-    if (check) {
-      res.json("exist");
-    } else {
-      res.json("notexist");
-    }
-  } catch (error) {
-    console.error("Error checking entreprise:", error);
-    res.status(500).json("error");
-  }
-};
+// exports.login = async (req, res) => {
+//   const { mail, password } = req.body;
+//   try {
+//     const check = await entreprise.findOne({ mail, password });
+//     if (check) {
+//       res.json("exist");
+//     } else {
+//       res.json("notexist");
+//     }
+//   } catch (error) {
+//     console.error("Error checking entreprise:", error);
+//     res.status(500).json("error");
+//   }
+// };
 
-exports.Signup = async (req, res) => {
+exports.signup = async (req, res) => {
   const { mail, password, name, address, phone } = req.body;
   try {
     // Vérifie si l'email de l'entreprise existe déjà
