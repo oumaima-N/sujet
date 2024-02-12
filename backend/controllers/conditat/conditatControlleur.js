@@ -1,6 +1,6 @@
-// entrepriseController.js
+// conditatController.js
 
-const entreprise = require("../../Models/conditat");
+const conditat = require("../../Models/conditat");
 
 exports.login = async (req, res) => {
   const { mail, password } = req.body;

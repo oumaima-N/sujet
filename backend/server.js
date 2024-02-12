@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require("cors");
 const entrepriseRoutes = require('./routes/entreprise/entrepriseRoutes');
+const conditatRoutes = require('./routes/conditat/conditatRoutes')
 
 const app = express();
 app.use(express.json());
@@ -15,6 +16,7 @@ app.use(cors({
 
 
 app.use('/', entrepriseRoutes);
+app.use('/',conditatRoutes)
 mongoose.connect('mongodb://localhost:27017/plateforme', {
    useNewUrlParser: true,
    useUnifiedTopology: true

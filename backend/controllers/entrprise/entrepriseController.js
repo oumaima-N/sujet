@@ -5,7 +5,7 @@ const entreprise = require("../../Models/entreprise");
 exports.login = async (req, res) => {
   const { mail, password } = req.body;
   try {
-    const check = await entreprise.findOne({ mail, password });
+    const check = await conditat.findOne({ mail, password });
     if (check) {
       res.json({ message: 'User successfully signed up', redirectTo: '/home' });
     } else {
@@ -29,13 +29,13 @@ exports.signup = async (req, res) => {
   }
   try {
     // Vérifie si l'email de l'entreprise existe déjà
-    const check = await entreprise.findOne({ mail: mail });
+    const check = await conditat.findOne({ mail: mail });
     if (check) {
       // Si l'email existe déjà, renvoie une réponse indiquant que l'utilisateur existe
       return res.json("exist");
     } else {
       // Si l'email n'existe pas encore, crée un nouveau document dans la collection Entreprise
-      await entreprise.create(data);
+      await conditat.create(data);
       // Renvoie une réponse indiquant que l'inscription a réussi
       res.json({ message: 'User successfully signed up', redirectTo: '/home' });
     }
