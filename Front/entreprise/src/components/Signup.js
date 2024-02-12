@@ -1,22 +1,24 @@
-import '../App.css';
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const navigate = useNavigate();
-  const handleGoBack = () => {
-    navigate(-1);
-   };
+
   const [mail, setMail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   async function submit(e) {
     e.preventDefault();
     try {
+      
       const res = await axios.post("http://127.0.0.1:3000/signup", {
         mail,
         password,
@@ -28,11 +30,12 @@ function Signup() {
       if (res.data === "exist") {
         alert("User already exists");
       } else if (res.data === "notexist") {
+        // Redirection vers la page d'accueil avec l'identifiant de l'utilisateur
         navigate("/home", { state: { id: mail } });
       }
-    } catch (e) {
-      alert("wrong details");
-      console.log(e);
+    } catch (error) {
+      alert("Wrong details");
+      console.log(error);
     }
   };
 

@@ -3,7 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require("cors");
-const entrepriseRoutes = require('./routes/entrepriseRoutes');
+const entrepriseRoutes = require('./routes/entreprise/entrepriseRoutes');
 
 const app = express();
 app.use(express.json());
@@ -12,6 +12,7 @@ app.use(cors({
   //  methods: 'GET,POST',
   //  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
 
 app.use('/', entrepriseRoutes);
 mongoose.connect('mongodb://localhost:27017/plateforme', {
