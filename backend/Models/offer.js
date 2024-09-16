@@ -29,7 +29,7 @@ const offerSchema = Schema({
         
     },
     Users: [
-    { type: Schema.Types.ObjectId, 
+    { type: mongoose.Schema.Types.ObjectId, 
         ref: 'User',
     },
     ],

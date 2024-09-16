@@ -1,6 +1,6 @@
 const mongoose = require(mongoose);
-const entreprise = require('./Company');
-const campany = require('./Company');
+const entreprise = require('./entreprise');
+const campany = require('./entreprise');
 const Offer = require('./offer');
 
 mongoose.connect('mongodb://127.0.0.1:27017');

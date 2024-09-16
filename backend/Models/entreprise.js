@@ -35,7 +35,7 @@ const entrepriseSchema = mongoose.Schema({
     //les offre qui fournit par l'entreprise
     offers: [
         {
-             type: Schema.Types.ObjectId,
+             type: mongoose.Schema.Types.ObjectId,
               ref: 'offer' ,
         },],
     login: [
